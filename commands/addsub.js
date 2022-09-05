@@ -33,7 +33,7 @@ module.exports = {
         let subname = interaction.options.getString("name")
         let sublevel = interaction.options.getString("level")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=addsub&name=${subname}&level=${sublevel}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=addsub&name=${subname}&level=${sublevel}`)
         .then(res => res.json())
         .then(json => {
 			if (json.success) {

@@ -41,7 +41,7 @@ module.exports = {
         let subname = interaction.options.getString("subname")
         let days = interaction.options.getString("expiry")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=extend&user=${un}&name=${subname}&expiry=${days}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=extend&user=${un}&name=${subname}&expiry=${days}`)
         .then(res => res.json())
         .then(json => {
 			if (json.success)

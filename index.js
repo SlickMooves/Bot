@@ -62,7 +62,7 @@ client.once('ready', async() => {
     client.user.setPresence({
         activities: [
             {
-                name: "Project Astroz",
+                name: "Astroz.cc",
                 type: "WATCHING",
             }
         ],
@@ -92,7 +92,7 @@ client.on('interactionCreate', async interaction => {
 	client.user.setPresence({
         activities: [
             {
-                name: "Project Astroz",
+                name: "Astroz.cc",
                 type: "WATCHING",
             }
         ],

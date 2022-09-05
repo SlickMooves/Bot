@@ -33,7 +33,7 @@ module.exports = {
         let user = interaction.options.getString("user")
         let time = interaction.options.getString("time")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=muteuser&user=${user}&time=${time}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=muteuser&user=${user}&time=${time}`)
         .then(res => res.json())
         .then(json => {
 			if (json.success) {

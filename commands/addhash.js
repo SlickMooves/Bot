@@ -26,7 +26,7 @@ module.exports = {
 
         let md5hash = interaction.options.getString("hash")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=addhash&hash=${md5hash}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=addhash&hash=${md5hash}`)
         .then(res => res.json())
         .then(json => {
             if (json.success) {

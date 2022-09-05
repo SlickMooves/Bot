@@ -46,7 +46,7 @@ module.exports = {
 		if(amount > 20) return interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Failure').addField('Reason:', `You cannot add more than twenty keys at a time.`).setColor("RED").setFooter({ text: "KeyAuth Discord Bot" }).setTimestamp()]})
 		
         if(days) {
-			fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=add&expiry=${days}&mask=${license_mask}&level=${level}&amount=${amount}&format=text`)
+			fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=add&expiry=${days}&mask=${license_mask}&level=${level}&amount=${amount}&format=text`)
 			.then(res => res.text())
 			.then(text => {
 				if(!text.includes("message"))
@@ -68,7 +68,7 @@ module.exports = {
 			if(licenseAdd === null) return interaction.editReply({ embeds: [new Discord.MessageEmbed().setDescription(`No config saved for adding licenses yet. Please do a command with paramaters included then this will work.`).setColor("RED").setTimestamp()]})
 			licenseAdd = JSON.parse(licenseAdd);
 		
-			fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=add&expiry=${licenseAdd.days}&mask=${license_mask}&level=${licenseAdd.level}&amount=${licenseAdd.amount}&format=text`)
+			fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=add&expiry=${licenseAdd.days}&mask=${license_mask}&level=${licenseAdd.level}&amount=${licenseAdd.amount}&format=text`)
 			.then(res => res.text())
 			.then(text => {
 				if(!text.includes("message"))
