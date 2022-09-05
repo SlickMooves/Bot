@@ -78,7 +78,7 @@ client.on('interactionCreate', async interaction => {
 
     if (!command) return;
 
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({  });
 	
 	if(interaction.member != null)
 	if(!interaction.member.roles.cache.find(x => x.name == "perms")) return interaction.editReply({ embeds: [new Discord.MessageEmbed().setDescription(`You need a role with the name \`perms\` to execute commands. Please ask an administrator to create a role with this name if not already done and assign it to you.`).setColor("RED").setTimestamp()] })
@@ -134,7 +134,7 @@ client.on('interactionCreate', async interaction => {
 
         await interaction.editReply({
             embeds: [errorembed],
-            ephemeral: true
+            
         })
     }
 });

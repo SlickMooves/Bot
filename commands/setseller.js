@@ -28,11 +28,11 @@ module.exports = {
 			idfrom = interaction.guild.id;
 		db.fetch(`token_${idfrom}`)
 		db.set(`token_${idfrom}`, sellerkey)
-		interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Seller Key Successfully Set!').setColor("GREEN").setTimestamp()], ephemeral: true})
+		interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Seller Key Successfully Set!').setColor("GREEN").setTimestamp()], })
     }
     else
     {
-		interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Your seller key is most likely invalid. Change your seller key with \`/setseller\` command.`).setColor("RED").setFooter({ text: "KeyAuth Discord Bot" }).setTimestamp()], ephemeral: true})
+		interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Your seller key is most likely invalid. Change your seller key with \`/setseller\` command.`).setColor("RED").setFooter({ text: "KeyAuth Discord Bot" }).setTimestamp()], })
     }
     })
     },
