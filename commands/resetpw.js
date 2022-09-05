@@ -33,9 +33,9 @@ module.exports = {
         let user = interaction.options.getString("user")
         let pass = interaction.options.getString("pass")
 
-		let url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=resetpw&user=${user}&passwd=${pass}`
+		let url = `https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=resetpw&user=${user}&passwd=${pass}`
 		if(!pass)
-			url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=resetpw&user=${user}`
+			url = `https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=resetpw&user=${user}`
 		
         fetch(url)
         .then(res => res.json())

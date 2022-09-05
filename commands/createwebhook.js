@@ -50,7 +50,7 @@ module.exports = {
             return interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle("Failure, Please Include `http:\/\/` or `https:\/\/` on webhook link").setColor("RED").setTimestamp().setFooter({ text: "KeyAuth Discord Bot" })], ephemeral: true })
         }
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=addwebhook&baseurl=${baseurl}&ua=${useragent}&authed=${authed}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=addwebhook&baseurl=${baseurl}&ua=${useragent}&authed=${authed}`)
         .then(res => res.json())
         .then(json => {
             if (json.success) {

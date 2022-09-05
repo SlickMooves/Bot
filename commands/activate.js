@@ -40,7 +40,7 @@ module.exports = {
         let pw = interaction.options.getString("password")
         let key = interaction.options.getString("license")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=activate&user=${un}&key=${key}&pass=${pw}&format=text`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=activate&user=${un}&key=${key}&pass=${pw}&format=text`)
         .then(res => res.json())
         .then(json => {
 		if(json.success) {

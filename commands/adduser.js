@@ -47,9 +47,9 @@ module.exports = {
         let sub = interaction.options.getString("sub")
         let expires = interaction.options.getString("expires")
 
-		let url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=adduser&user=${user}&sub=${sub}&expiry=${expires}&pass=${pass}`
+		let url = `https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=adduser&user=${user}&sub=${sub}&expiry=${expires}&pass=${pass}`
 		if(!pass)
-			url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=adduser&user=${user}&sub=${sub}&expiry=${expires}`
+			url = `https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=adduser&user=${user}&sub=${sub}&expiry=${expires}`
 		
         fetch(url)
         .then(res => res.json())

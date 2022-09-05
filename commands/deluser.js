@@ -26,7 +26,7 @@ module.exports = {
 
         let un = interaction.options.getString("username")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=deluser&user=${un}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=deluser&user=${un}`)
         .then(res => res.json())
         .then(json => {
             if (json.success)

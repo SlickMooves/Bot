@@ -40,7 +40,7 @@ module.exports = {
         let varvalue = interaction.options.getString("value")
 		let authed = interaction.options.getString("authed")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=addvar&name=${varname}&data=${varvalue}&authed=${authed}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=addvar&name=${varname}&data=${varvalue}&authed=${authed}`)
         .then(res => res.json())
         .then(json => {
 			if(json.success) {

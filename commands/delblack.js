@@ -41,8 +41,8 @@ module.exports = {
 		}
 		
 		let url = null;
-		if(ip) url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=delblack&data=${ip}&blacktype=ip`;
-		if(hwid) url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=delblack&data=${hwid}&blacktype=hwid`;
+		if(ip) url = `https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=delblack&data=${ip}&blacktype=ip`;
+		if(hwid) url = `https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=delblack&data=${hwid}&blacktype=hwid`;
 
         fetch(url)
         .then(res => res.json())

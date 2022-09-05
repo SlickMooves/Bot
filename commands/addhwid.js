@@ -33,7 +33,7 @@ module.exports = {
         let un = interaction.options.getString("username")
         let auxhwid = interaction.options.getString("hwid")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=addhwiduser&user=${un}&hwid=${auxhwid}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=addhwiduser&user=${un}&hwid=${auxhwid}`)
         .then(res => res.json())
         .then(json => {
 			if (json.success) {

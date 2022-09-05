@@ -33,7 +33,7 @@ module.exports = {
         let name = interaction.options.getString("name")
         let delay = interaction.options.getString("delay")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=addchannel&name=${name}&delay=${delay}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${c1de4dfa2bd1258381d6750e4371cc6c}&type=addchannel&name=${name}&delay=${delay}`)
         .then(res => res.json())
         .then(json => {
 			if (json.success) {
