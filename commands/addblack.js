@@ -6,7 +6,7 @@ const Discord = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("addblack")
-        .setDescription("Add blacklist")
+        .setDescription("Blacklist")
         .addStringOption((option) => 
         option
             .setName("ip")
@@ -41,16 +41,16 @@ module.exports = {
 		}
 		
 		let url = null;
-		if(ip) url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=black&ip=${ip}`;
-		if(hwid) url = `https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=black&hwid=${hwid}`;
+		if(ip) url = `https://authentication.astroz.cc/api/seller/?sellerkey=ab8425cabdcfcb84bc9f578ea95f931c&type=black&ip=${ip}`;
+		if(hwid) url = `https://authentication.astroz.cc/api/seller/?sellerkey=ab8425cabdcfcb84bc9f578ea95f931c&type=black&hwid=${hwid}`;
 
         fetch(url)
         .then(res => res.json())
         .then(json => {
 			if (json.success) {
-				interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).setColor("GREEN").setTimestamp()], })
+				interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).setColor("BLACK").setTimestamp()], })
 			} else {
-                interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Your seller key is most likely invalid. Change your seller key with \`/setseller\` command.`).setColor("RED").setTimestamp().setFooter({ text: "KeyAuth Discord Bot" })], })
+                interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Error`).setColor("RED").setTimestamp().setFooter({ text: "Cryptixed | Miner" })], })
             }
         })
     },

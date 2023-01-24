@@ -26,16 +26,16 @@ module.exports = {
 
         let un = interaction.options.getString("username")
         
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=resetuser&user=${un}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=ab8425cabdcfcb84bc9f578ea95f931c&type=resetuser&user=${un}`)
         .then(res => res.json())
         .then(json => {
         if(json.success)
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('User Successfully Reset!').addField('Username:', `\`${un}\``).setColor("GREEN").setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('User Successfully Reset!').addField('Username:', `\`${un}\``).setColor("BLACK").setTimestamp()], })
         }
         else
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Your seller key is most likely invalid. Change your seller key with \`/setseller\` command.`).setColor("RED").setFooter({ text: "KeyAuth Discord Bot" }).setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Error`).setColor("RED").setTimestamp().setFooter({ text: "Cryptixed | Miner" })], })
         }
         })
     },

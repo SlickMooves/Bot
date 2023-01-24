@@ -62,7 +62,7 @@ client.once('ready', async() => {
     client.user.setPresence({
         activities: [
             {
-                name: "Astroz.cc",
+                name: "Cryptixed | Miner",
                 type: "WATCHING",
             }
         ],
@@ -87,12 +87,12 @@ client.on('interactionCreate', async interaction => {
     .setAuthor({ name: "Interaction Failed" })
     .setColor("RED")
     .setTimestamp()
-    .setFooter({ text: "KeyAuth Discord Bot", iconURL: client.user.displayAvatarURL()})
+    .setFooter({ text: "Cryptixed | Miner", iconURL: client.user.displayAvatarURL()})
 
 	client.user.setPresence({
         activities: [
             {
-                name: "Astroz.cc",
+                name: "Cryptixed | Miner",
                 type: "WATCHING",
             }
         ],

@@ -18,16 +18,16 @@ module.exports = {
         let sellerkey = await db.get(`token_${idfrom}`)
         if(sellerkey === null) return interaction.editReply({ embeds: [new Discord.MessageEmbed().setDescription(`The \`SellerKey\` **Has Not Been Set!**\n In Order To Use This Bot You Must Run The \`setseller\` Command First.`).setColor("RED").setTimestamp()], })
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=resethash`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=ab8425cabdcfcb84bc9f578ea95f931c&type=resethash`)
         .then(res => res.json())
         .then(json => {
         if(json.success)
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Hash Successfully Reset!').addField('Reminder:', `You need to reset hash each time you compile loader.`).setColor("GREEN").setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Hash Successfully Reset!').addField('Reminder:', `You need to reset hash each time you compile loader.`).setColor("BLACK").setTimestamp()], })
         }
         else
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Your seller key is most likely invalid. Change your seller key with \`/setseller\` command.`).setColor("RED").setFooter({ text: "KeyAuth Discord Bot" }).setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Error`).setColor("RED").setTimestamp().setFooter({ text: "Cryptixed | Miner" })], })
         }
         })
     },

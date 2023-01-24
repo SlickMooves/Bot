@@ -26,16 +26,16 @@ module.exports = {
 
         let key = interaction.options.getString("license")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=verify&key=${key}`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=ab8425cabdcfcb84bc9f578ea95f931c&type=verify&key=${key}`)
         .then(res => res.json())
         .then(json => {
         if(json.success)
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).setColor("GREEN").setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).setColor("BLACK").setTimestamp()], })
         }
         else
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Your seller key is most likely invalid. Change your seller key with \`/setseller\` command.`).setColor("RED").setFooter({ text: "KeyAuth Discord Bot" }).setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Note:', `Key not found.`).setColor("RED").setFooter({ text: "Cryptixed | Miner" }).setTimestamp()], })
         }
         })
     },

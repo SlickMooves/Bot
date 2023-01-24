@@ -26,12 +26,12 @@ module.exports = {
 
         let key = interaction.options.getString("license")
 
-        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=${sellerkey}&type=del&key=${key}&format=json`)
+        fetch(`https://authentication.astroz.cc/api/seller/?sellerkey=ab8425cabdcfcb84bc9f578ea95f931c&type=del&key=${key}&format=json`)
         .then(res => res.json())
         .then(json => {
         if(json.success)
         {
-            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Key Deleted:', `\`${key}\``).setColor("GREEN").setTimestamp()], })
+            interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle(json.message).addField('Key Deleted:', `\`${key}\``).setColor("BLACK").setTimestamp()], })
         }
         else
         {

@@ -24,7 +24,7 @@ module.exports = {
 	
 	db.fetch(`wh_url_${idfrom}`)
 	db.set(`wh_url_${idfrom}`, webhook)
-    interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Successfully set discord webhook to log commands to').setColor("GREEN").setTimestamp().setFooter({ text: "KeyAuth Discord Bot" })], })
+    interaction.editReply({ embeds: [new Discord.MessageEmbed().setTitle('Successfully set discord webhook to log commands to').setColor("BLACK").setTimestamp().setFooter({ text: "Cryptixed | Miner" })], })
 	
     },
 };
